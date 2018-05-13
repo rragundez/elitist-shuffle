@@ -83,6 +83,4 @@ def elitist_shuffle(items, inequality):
         inequality
     )
     weights = weights / np.linalg.norm(weights, ord=1)
-    return list(np.random.choice(
-                items, size=len(items), replace=False, p=weights
-                ))
+    return np.random.choice(items, size=len(items), replace=False, p=weights)
